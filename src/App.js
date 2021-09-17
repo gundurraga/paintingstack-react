@@ -1,13 +1,13 @@
-import logo from "./logo.svg";
-import "./App.css";
+// import "./css/reset.css";
+import Header from "./components/Header";
+import { GlobalStyle } from "./components/GlobalStyles.style";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Paintingstack React</h1>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Header />
+    </>
   );
 }
 
