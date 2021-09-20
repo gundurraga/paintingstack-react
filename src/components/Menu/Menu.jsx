@@ -1,31 +1,33 @@
-import React from "react";
-import { MenuDisplay, MenuHamburger, MenuItem } from "./Menu.style";
+import React, { useState } from "react";
+import { MenuDisplay, MenuBurger, MenuItem } from "./Menu.style";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LanguageIcon from "@material-ui/icons/Language";
+import { Paper, Switch } from "@material-ui/core";
 
-//https://codepen.io/gundurraga/pen/wveyXmZ?editors=0010
 const Menu = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <>
-      <MenuHamburger>
+      <MenuBurger onClick={handleToggle}>
         <div className="bar bar1"></div>
         <div className="bar bar2"></div>
         <div className="bar bar3"></div>
-      </MenuHamburger>
+      </MenuBurger>
 
-      <MenuDisplay>
+      <MenuDisplay className={isMenuOpen ? "isOpen" : null}>
         <MenuItem>
           <div className="itemContainer">
-            <LanguageIcon />
+            <LanguageIcon color="primary" />
             <h4>Lang: ENG</h4>
           </div>
         </MenuItem>
         <MenuItem>
           <div className=" itemContainer switchTheme">
+            <Switch color="default" />
             <h4>Night Mode</h4>
-            <div className="btn-nightMode">
-              <div className="switch"></div>
-            </div>
           </div>
         </MenuItem>
         <MenuItem>
@@ -34,7 +36,7 @@ const Menu = () => {
             target="_blank"
             rel="noreferrer">
             <div className="menuLink itemContainer">
-              <TwitterIcon sx={{ m: 10 }} />
+              <TwitterIcon color="primary" />
               <h4>Twitter</h4>
             </div>
           </a>

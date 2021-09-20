@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MenuHamburger = styled.div`
+export const MenuBurger = styled.div`
   display: block;
   cursor: pointer;
   position: absolute;
@@ -60,6 +60,11 @@ export const MenuDisplay = styled.ul`
   /* to stop flickering of text in safari */
   transition: visibility 0s, opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   z-index: 3;
+
+  .isOpen {
+    visibility: visible;
+    opacity: 0.95;
+  }
 `;
 
 export const MenuItem = styled.li`
@@ -74,14 +79,14 @@ export const MenuItem = styled.li`
     display: inline-block;
     line-height: 30px;
     margin: 0;
-    padding: 5px 10px;
+    padding: 5px 0 5px 10px;
     font-weight: 400;
     vertical-align: middle;
+    white-space: nowrap;
   }
 
-  .in-view {
-    visibility: visible;
-    opacity: 0.95;
+  .switchTheme h4 {
+    padding: 5px 0;
   }
 
   .itemContainer {
@@ -94,28 +99,5 @@ export const MenuItem = styled.li`
 
   .itemContainer:hover {
     background-color: rgb(209, 209, 209);
-  }
-
-  .btn-nightMode {
-    width: 35px;
-    height: 16px;
-    background: rgb(245, 245, 245);
-    border-radius: 25px;
-    position: relative;
-    display: inline-block;
-    border: 1px solid rgb(35, 34, 39);
-    cursor: pointer;
-  }
-
-  .btn-nightMode .switch {
-    background: white;
-    width: 12px;
-    height: 12px;
-    background: rgb(0, 59, 92);
-    border-radius: 100%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: visibility 0s, transform 0.5s ease;
   }
 `;
