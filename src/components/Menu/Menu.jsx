@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { MenuDisplay, MenuBurger, MenuItem } from "./Menu.style";
+
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LanguageIcon from "@material-ui/icons/Language";
-import { Paper, Switch } from "@material-ui/core";
+import { Switch } from "@material-ui/core";
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,13 +12,13 @@ const Menu = () => {
   };
   return (
     <>
-      <MenuBurger onClick={handleToggle}>
+      <MenuBurger onClick={handleToggle} open={isMenuOpen}>
         <div className="bar bar1"></div>
         <div className="bar bar2"></div>
         <div className="bar bar3"></div>
       </MenuBurger>
 
-      <MenuDisplay className={isMenuOpen ? "isOpen" : null}>
+      <MenuDisplay open={isMenuOpen}>
         <MenuItem>
           <div className="itemContainer">
             <LanguageIcon color="primary" />
@@ -25,7 +26,7 @@ const Menu = () => {
           </div>
         </MenuItem>
         <MenuItem>
-          <div className=" itemContainer switchTheme">
+          <div className="itemContainer switchTheme">
             <Switch color="default" />
             <h4>Night Mode</h4>
           </div>

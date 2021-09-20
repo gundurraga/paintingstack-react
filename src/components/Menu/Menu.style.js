@@ -14,7 +14,7 @@ export const MenuBurger = styled.div`
   &:hover,
   &:focus {
     background-color: rgb(235, 235, 235);
-    outline: 0;
+    outline: none;
   }
 
   .bar {
@@ -26,26 +26,24 @@ export const MenuBurger = styled.div`
     border-radius: 2px;
   }
 
-  .in-view .bar1 {
-    /* -webkit-transform: rotate(-45deg) translate(-9px, 6px); */
-    transform: translate(0, 10px) rotate(-45deg);
-    background: rgb(255, 184, 28);
+  .bar1 {
+    transform: ${({ open }) => open && "translate(0, 10px) rotate(-45deg)"};
+    background-color: ${({ open }) => open && "rgb(255, 184, 28)"};
   }
 
-  .in-view .bar2 {
-    opacity: 0;
+  .bar2 {
+    opacity: ${({ open }) => (open ? "0" : "1")};
   }
 
-  .in-view .bar3 {
-    /* -webkit-transform: rotate(45deg) translate(-8px, -8px); */
-    transform: translate(0, -10px) rotate(45deg);
-    background: rgb(255, 184, 28);
+  .bar3 {
+    transform: ${({ open }) => open && "translate(0, -10px) rotate(45deg)"};
+    background-color: ${({ open }) => open && "rgb(255, 184, 28)"};
   }
 `;
 
 export const MenuDisplay = styled.ul`
-  visibility: visible;
-  opacity: 0.95;
+  visibility: ${({ open }) => (open ? "visible" : "hidden")};
+  opacity: ${({ open }) => (open ? "0.95" : "0")};
   position: absolute;
   margin: 0;
   padding: 0;
@@ -60,11 +58,6 @@ export const MenuDisplay = styled.ul`
   /* to stop flickering of text in safari */
   transition: visibility 0s, opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   z-index: 3;
-
-  .isOpen {
-    visibility: visible;
-    opacity: 0.95;
-  }
 `;
 
 export const MenuItem = styled.li`
