@@ -58,6 +58,10 @@ export const MenuDisplay = styled.ul`
   /* to stop flickering of text in safari */
   transition: visibility 0s, opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   z-index: 3;
+
+  .language {
+    background: rgb(240, 240, 240);
+  }
 `;
 
 export const MenuItem = styled.li`
