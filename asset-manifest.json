@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/paintingstack-react/static/js/main.9bdacdfa.chunk.js",
-    "main.js.map": "/paintingstack-react/static/js/main.9bdacdfa.chunk.js.map",
+    "main.js": "/paintingstack-react/static/js/main.6b00fe6c.chunk.js",
+    "main.js.map": "/paintingstack-react/static/js/main.6b00fe6c.chunk.js.map",
     "runtime-main.js": "/paintingstack-react/static/js/runtime-main.ee33a88b.js",
     "runtime-main.js.map": "/paintingstack-react/static/js/runtime-main.ee33a88b.js.map",
-    "static/js/2.e82998b6.chunk.js": "/paintingstack-react/static/js/2.e82998b6.chunk.js",
-    "static/js/2.e82998b6.chunk.js.map": "/paintingstack-react/static/js/2.e82998b6.chunk.js.map",
+    "static/js/2.1452d6d6.chunk.js": "/paintingstack-react/static/js/2.1452d6d6.chunk.js",
+    "static/js/2.1452d6d6.chunk.js.map": "/paintingstack-react/static/js/2.1452d6d6.chunk.js.map",
     "index.html": "/paintingstack-react/index.html",
-    "static/js/2.e82998b6.chunk.js.LICENSE.txt": "/paintingstack-react/static/js/2.e82998b6.chunk.js.LICENSE.txt",
+    "static/js/2.1452d6d6.chunk.js.LICENSE.txt": "/paintingstack-react/static/js/2.1452d6d6.chunk.js.LICENSE.txt",
     "static/media/texture.76968609.png": "/paintingstack-react/static/media/texture.76968609.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ee33a88b.js",
-    "static/js/2.e82998b6.chunk.js",
-    "static/js/main.9bdacdfa.chunk.js"
+    "static/js/2.1452d6d6.chunk.js",
+    "static/js/main.6b00fe6c.chunk.js"
   ]
 }
